@@ -1,0 +1,19 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'JosefineSans', sans-serif;
+}
+
+@font-face {
+  font-family: 'JosefineSans';
+  src: url('src/assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
