@@ -1,34 +1,40 @@
-# B & A Archery Club – fiktive Vereinswebsite
+# B & A Archery Club – Fiktive Vereinswebsite
 
-**Abschlussprojekt · Vue 3 · JavaScript · CSS**
+**Abschlussprojekt | Vue 3 · JavaScript · CSS · Vite**
 
-> **Hinweis:** Dies ist ein **fiktives Abschlussprojekt**, keine Website eines echten Vereins. Der „B & A Archery Club“, die Vereinsangaben, Termine und Kontaktdaten dienen ausschließlich der Demonstration. **Über das Kontaktformular werden keine Nachrichten verschickt.**
+> **Hinweis:** Dies ist eine fiktive Vereinswebsite, die ich als Abschlussprojekt entwickelt habe. Der „B & A Archery Club“ existiert nicht. Vereins-, Kontakt-, Register- und Steuerangaben sowie Termine sind ausschließlich Beispielinhalte. Das Kontaktformular ist eine Demo: Es werden **keine Nachrichten verschickt oder dauerhaft gespeichert**.
 
 ## Über das Projekt
 
-Im Rahmen meines Abschlussprojekts habe ich eine Vereinswebsite für einen erfundenen Bogensportverein entwickelt. Ziel war es, eine mehrseitige Webanwendung mit **Vue 3** umzusetzen und dabei die Arbeit mit Komponenten, Routing und einer eigenständigen Benutzeroberfläche zu vertiefen.
+Für mein Abschlussprojekt habe ich eine mehrseitige Website für einen erfundenen Bogensportverein mit **Vue 3** umgesetzt.
 
-Die Website stellt typische Bereiche einer Vereinspräsenz dar: Informationen über den Verein und das Training, Neuigkeiten, eine Bildergalerie und eine Kontaktseite.
+Im Mittelpunkt standen die Arbeit mit wiederverwendbaren Komponenten, die Navigation über Vue Router und die Gestaltung einer übersichtlichen Benutzeroberfläche.
+
+Nach dem ursprünglichen Projektabschluss habe ich die Anwendung weiter überarbeitet, insbesondere im Hinblick auf **Responsive Design**, Bedienbarkeit und die Darstellung der Bilder.
 
 ## Funktionen
 
-- Navigation zwischen Startseite, „Über uns“, „Aktuelles“, „Verein“, „Bilder“, „Kontakt“ und „Impressum“ mithilfe von Vue Router
-- Wiederverwendbare Komponenten für Navigation, Header und Footer
-- Vereinsinformationen, darunter Trainingszeiten, Trainerteam und Probetraining
-- Bildergalerie mit vergrößerbarer Bildansicht (Lightbox)
-- Mobiles Navigationsmenü als erster Schritt in Richtung Responsive Design
-- **Kontaktformular als reine Demo:** Die Eingaben werden im Browser geprüft, aber nicht an einen Server gesendet oder dauerhaft gespeichert. Die derzeitige Erfolgsmeldung ist nur eine Simulation.
+- **Mehrseitige Navigation:** Startseite, Über uns, Aktuelles, Verein, Bilder, Kontakt und Impressum
+- **Responsive Layouts:** Anpassungen für Smartphone, Tablet und Desktop
+- **Mobiles Navigationsmenü:** Auf- und zuklappbar, mit automatischem Schließen nach der Auswahl eines Menüpunkts
+- **Vereinsinformationen:** Trainingszeiten, Trainerteam, Probetraining und Beitragsordnung als fiktive Beispielinhalte
+- **Bildergalerie:** Indoor-, Wettkampf- und Outdoor-Bilder mit vergrößerbarer Ansicht (Lightbox)
+- **Demo-Kontaktformular:** Formularvalidierung im Browser und transparente Rückmeldung, ohne tatsächlichen Versand
+- **Wiederverwendbare Komponenten:** Unter anderem für Header, Navigation und Footer
 
 ## Verwendete Technologien
 
-- **Vue 3** – komponentenbasierte Benutzeroberfläche
-- **JavaScript**, **HTML** und **CSS**
-- **Vue Router** – Navigation zwischen den Ansichten
-- **Vue Easy Lightbox** – vergrößerte Bildergalerie
-- **Vite** – Entwicklungsserver und Build-Werkzeug
-- **ESLint** und **Prettier** – Werkzeuge zur Codequalität und Formatierung
+| Technologie       | Verwendung                                  |
+| ----------------- | ------------------------------------------- |
+| Vue 3             | Komponenten und Benutzeroberfläche          |
+| JavaScript        | Interaktion und Formularlogik               |
+| HTML & CSS        | Struktur, Gestaltung und responsive Layouts |
+| Vue Router        | Navigation zwischen Seiten                  |
+| Vue Easy Lightbox | Vergrößerte Ansicht der Galeriebilder       |
+| Vite              | Entwicklungsserver und Produktions-Build    |
+| ESLint & Prettier | Codeprüfung und Formatierung                |
 
-*Pinia ist im Projekt eingerichtet, wird für die bisher gezeigten Funktionen aber nicht wesentlich benötigt.*
+_Pinia ist im Projekt eingerichtet, spielt für die derzeitigen Funktionen aber keine wesentliche Rolle._
 
 ## Lokal starten
 
@@ -41,37 +47,50 @@ npm install
 npm run dev
 ```
 
-Die lokale Adresse zeigt Vite nach dem Start im Terminal an.
+Die lokale URL wird anschließend im Terminal angezeigt.
 
-Für einen Produktions-Build:
+### Produktions-Build testen
 
 ```bash
 npm run build
 npm run preview
 ```
 
+Der Produktions-Build und die Vorschau wurden nach den Überarbeitungen lokal getestet.
+
+Eine automatisierte Testsuite ist derzeit nicht eingerichtet.
+
 ## Projektstruktur
 
 ```text
 src/
-├── assets/       # Styles, Bilder und Schriftdateien
-├── components/   # Wiederverwendbare UI-Bestandteile
-├── router/       # Routen der Anwendung
+├── assets/       # Bilder, Schriftdateien und globale Styles
+├── components/   # Wiederverwendbare Vue-Komponenten
+├── router/       # Definition der Anwendungsrouten
 ├── views/        # Einzelne Seitenansichten
-├── App.vue       # Wurzelkomponente
+├── App.vue       # Hauptkomponente
 └── main.js       # Einstiegspunkt der Anwendung
 ```
 
-## Aktueller Stand und nächste Schritte
+## Überarbeitung und Projektstand
 
-Das Projekt befindet sich noch in der Überarbeitung. Insbesondere sind folgende Verbesserungen geplant:
+Nach der ursprünglichen Entwicklung habe ich folgende Verbesserungen vorgenommen:
 
-- [ ] Layouts für Smartphone, Tablet und Desktop konsequent responsiv gestalten
-- [ ] Bildpfade für den Produktions-Build überprüfen und gegebenenfalls korrigieren
-- [ ] Das Kontaktformular auch in der Benutzeroberfläche eindeutig als Demo kennzeichnen
-- [ ] Bedienbarkeit und Barrierefreiheit verbessern, insbesondere bei Navigation und Formular
-- [ ] Anwendung auf verschiedenen Bildschirmgrößen und im Produktions-Build testen
+- Responsive Gestaltung der Navigation und der Seitenlayouts
+- Verbesserte Bedienbarkeit des mobilen Navigationsmenüs
+- Kennzeichnung des Kontaktformulars als Demo ohne Nachrichtenversand
+- Austausch ausgewählter Galeriebilder
+- Korrektur der Bildimporte für den Vite-Produktions-Build
+- Prüfung der wichtigsten Seiten auf unterschiedlichen Bildschirmgrößen
+
+### Projektstatus
+
+Das Abschlussprojekt ist als demonstratives Portfolio-Projekt aufbereitet.
+
+Es handelt sich **nicht um eine produktiv betriebene Vereinswebsite**.
+
+Weitere Verbesserungen, etwa zusätzliche automatisierte Tests und eine vertiefte Barrierefreiheitsprüfung, sind möglich.
 
 ## Autor
 
-Entwickelt von [Thomas Brakutt](https://github.com/thomas-brakutt) als Abschlussprojekt.
+Entwickelt von [Thomas Brakutt](https://github.com/thomas-brakutt) im Rahmen eines Abschlussprojekts.
