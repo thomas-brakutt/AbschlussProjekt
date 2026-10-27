@@ -165,11 +165,50 @@ button:hover {
   margin-bottom: 2px;
 }
 
-/* @media (min-width: 1024px) {
-  .kontakt {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+/* Responsive Anpassungen */
+
+.main-container {
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.div-container {
+  flex: 1 1 400px;
+  min-width: 0;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.adress-div {
+  flex: 1 1 260px;
+  min-width: 0;
+  margin-top: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Smartphones */
+@media screen and (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
   }
-} */
+
+  .div-container,
+  .adress-div {
+    width: 100%;
+    flex: initial;
+  }
+}
 </style>
