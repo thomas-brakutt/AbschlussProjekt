@@ -42,29 +42,51 @@
   text-align: center;
 }
 
-.Bild {
-  width: 500px;
-  height: auto;
-  margin: 2rem 0 0 1rem;
-}
-
-p {
-  text-align: justify;
-  width: 500px;
-  margin-inline: auto;
-  line-height: 2rem;
-  font-size: 1.3rem;
-}
-
+/* Layout für größere Bildschirme */
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Bild passt sich seiner Spalte an */
+.Bild {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Flexible Textbreite */
+p {
+  width: 100%;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
 hr {
   border: 5px solid rgb(199, 159, 47);
   margin-top: 2rem;
   margin-bottom: 2px;
+}
+
+/* Layout für Tablets und Smartphones */
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
 </style>
