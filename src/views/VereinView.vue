@@ -342,11 +342,109 @@ dd {
   margin-bottom: 2px;
 }
 
-/* @media (min-width: 1024px) {
-  .verein {
-    min-height: 100vh;
-    display: flex;
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+/* Tablets */
+@media screen and (max-width: 900px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  /* Überschriften ohne großen linken Abstand */
+  .container h2,
+  .container h3 {
+    margin-left: 0;
+  }
+
+  /* Trainingszeiten */
+  .container-öffnungszeiten {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .container-öffnungszeiten > article > p {
+    margin-left: 0;
+  }
+
+  /* Trainerbilder dürfen umbrechen */
+  .pic-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-left: 0;
+  }
+
+  .trainer-pic {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .trainer-pic img {
+    max-width: 100%;
+  }
+
+  /* Probetraining */
+  .Probetraining > article > p {
+    margin-inline: 0;
+  }
+
+  /* Beitragsordnung */
+  .Beitraggsordnung > article > h4 {
+    margin-inline: 0;
+  }
+
+  .Beitraggsordnung > article > p {
+    margin-left: 0;
+  }
+
+  dl {
+    margin-left: 0;
+  }
+}
+
+/* Smartphones */
+@media screen and (max-width: 600px) {
+  .container {
+    padding-inline: 1rem;
+  }
+
+  /* Trainingszeiten untereinander */
+  .container-öffnungszeiten {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Trainerbilder untereinander */
+  .pic-container {
+    flex-direction: column;
     align-items: center;
   }
-} */
+
+  .trainer-pic {
+    width: 100%;
+  }
+
+  /* Bessere Lesbarkeit */
+  .container p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .container h2,
+  .container h3 {
+    font-size: 1.5rem;
+  }
+
+  dt {
+    font-size: 1.15rem;
+  }
+
+  dd {
+    font-size: 1rem;
+  }
+}
 </style>
