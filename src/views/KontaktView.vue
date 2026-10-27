@@ -4,6 +4,12 @@
   </header>
   <main class="main-container">
     <div class="div-container">
+      <p class="demo-notice">
+        Hinweis: Dies ist ein Demoformular für ein fiktives Abschlussprojekt. Es werden keine
+        Nachrichten versendet oder dauerhaft gespeichert. Bitte keine echten persönlichen Daten
+        eingeben.
+      </p>
+
       <form @submit.prevent="submitForm" class="contact-form">
         <label for="firstName">Vorname</label>
         <input type="text" id="firstName" v-model="form.firstName" required />
@@ -59,11 +65,9 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log('Formulardaten:', this.form)
-      alert('Formular erfolgreich gesendet!')
-      // Hier könnte z. B. eine API-Anfrage gesendet werden
+      alert('Demo erfolgreich getestet! Es wurde keine Nachricht verschickt oder gespeichert.')
 
-      // Formulardaten zurücksetzen
+      // Eingabefelder zurücksetzen
       this.form = {
         firstName: '',
         lastName: '',
@@ -163,6 +167,16 @@ button:hover {
   border: 5px solid rgb(199, 159, 47);
   margin-top: 2rem;
   margin-bottom: 2px;
+}
+
+.demo-notice {
+  padding: 1rem;
+  background-color: #fff8e1;
+  border-left: 4px solid rgb(199, 159, 47);
+  border-radius: 4px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Responsive Anpassungen */
