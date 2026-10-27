@@ -30,37 +30,42 @@
 import { ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 
-// Bilder nach Kategorien sortiert
-const galleries = ref([
+// Bilder werden über Vite importiert
+import indoor01 from '@/assets/pictures/Indoor_01.jpg'
+import indoor02 from '@/assets/pictures/Indoor_02.png'
+
+import wettkampf01 from '@/assets/pictures/Wettkampf_01.jpg'
+import wettkampf02 from '@/assets/pictures/Wettkampf_02.png'
+import wettkampf03 from '@/assets/pictures/Wettkampf_03.jpg'
+import wettkampf04 from '@/assets/pictures/Wettkampf_04.jpg'
+
+import outdoor01 from '@/assets/pictures/Outdoor_01.jpg'
+import outdoor02 from '@/assets/pictures/Outdoor_02.jpg'
+import outdoor03 from '@/assets/pictures/Outdoor_03.jpg'
+import outdoor04 from '@/assets/pictures/Outdoor_04.jpg'
+
+// Bildergalerien
+const galleries = [
   {
     title: '🏹 Indoor',
-    images: ['src/assets/pictures/Indoor_01.jpg', 'src/assets/pictures/Indoor_02.jpg'],
+    images: [indoor01, indoor02],
   },
   {
     title: '🥇 Wettkämpfe',
-    images: [
-      'src/assets/pictures/Wettkampf_01.jpg',
-      'src/assets/pictures/Wettkampf_02.jpg',
-      'src/assets/pictures/Wettkampf_03.jpg',
-      'src/assets/pictures/Wettkampf_04.jpg',
-    ],
+    images: [wettkampf01, wettkampf02, wettkampf03, wettkampf04],
   },
   {
     title: '🏹 Outdoor',
-    images: [
-      'src/assets/pictures/Outdoor_01.jpg',
-      'src/assets/pictures/Outdoor_02.jpg',
-      'src/assets/pictures/Outdoor_03.jpg',
-      'src/assets/pictures/Outdoor_04.jpg',
-    ],
+    images: [outdoor01, outdoor02, outdoor03, outdoor04],
   },
-])
+]
 
+// Lightbox-Zustand
 const showLightbox = ref(false)
 const selectedImages = ref([])
 const selectedImageIndex = ref(0)
 
-// Lightbox öffnen und nur die Bilder der gewählten Kategorie anzeigen
+// Lightbox öffnen
 const openLightbox = (images, index) => {
   selectedImages.value = images
   selectedImageIndex.value = index
