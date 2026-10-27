@@ -24,7 +24,7 @@
 
 <style scoped>
 .container {
-  background-image: url('/src/assets/pictures/Bogen_und_Pfeil.jpg'); /* Stelle sicher, dass der Pfad korrekt ist */
+  background-image: url('../assets/pictures/Bogen_und_Pfeil.jpg');
   background-size: cover; /* Bild füllt den gesamten Body */
   background-position: center; /* Bild bleibt zentriert */
   background-repeat: no-repeat; /* Kein wiederholtes Bild */
@@ -100,5 +100,38 @@ button:hover {
 
 .listContainer {
   margin-top: 6rem;
+}
+
+/* Responsive Startseite */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+    margin-top: 2rem;
+  }
+
+  h2,
+  h4,
+  ul {
+    font-size: 1.1rem;
+  }
+
+  .listContainer {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  ul {
+    margin-left: 1.25rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
 }
 </style>

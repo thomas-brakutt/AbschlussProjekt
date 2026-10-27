@@ -97,11 +97,21 @@ hr {
   margin-bottom: 2px;
 }
 
-/* @media (min-width: 1024px) {
-  .aktuelles {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+/* Responsive Aktuelles-Seite */
+@media screen and (max-width: 900px) {
+  .container {
+    margin-left: 0;
+    padding-inline: 1.25rem;
   }
-} */
+
+  article > p {
+    margin-inline: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  article h2 {
+    font-size: clamp(1.25rem, 4vw, 1.65rem);
+  }
+}
 </style>

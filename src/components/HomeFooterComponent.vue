@@ -1,11 +1,11 @@
 <template>
   <footer class="container">
-    <adress class="anfahrt">
+    <section class="anfahrt">
       <h2>Anfahrt</h2>
       <p>Musterweg 12 Halle 3,</p>
       <p>Eingang A, 1. OG</p>
       <p>12345 Musterhausen</p>
-    </adress>
+    </section>
     <section class="kontakt">
       <h2>Kontakt</h2>
       <address>
@@ -37,5 +37,26 @@ h1 {
 }
 p {
   line-height: 1.6; /* Erhöht den Zeilenabstand */
+}
+
+/* Responsiver Footer */
+.container {
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.anfahrt,
+.kontakt {
+  flex: 1 1 230px;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
 }
 </style>

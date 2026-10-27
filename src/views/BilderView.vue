@@ -120,12 +120,4 @@ hr {
   margin-top: 2rem;
   margin-bottom: 2px;
 }
-
-/* @media (min-width: 1024px) {
-  .gutschein {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-} */
 </style>

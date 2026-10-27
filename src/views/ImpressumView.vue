@@ -42,11 +42,13 @@ hr {
   margin-bottom: 2px;
 }
 
-/* @media (min-width: 1024px) {
-  .impressum {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+/* Responsive Impressum */
+@media screen and (max-width: 900px) {
+  p {
+    margin: 1.5rem 1rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
   }
-} */
+}
 </style>
