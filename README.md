@@ -14,7 +14,9 @@ Nach dem ursprünglichen Projektabschluss habe ich die Anwendung weiter überarb
 
 ## Screenshot
 
-![Startseite der fiktiven B & A Archery Club Website](src/sreenshots/startseite.png)
+## Screenshot
+
+![Startseite des B & A Archery Clubs](src/screenshots/startseite.png)
 
 ## Funktionen
 
