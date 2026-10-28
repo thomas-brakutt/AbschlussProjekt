@@ -12,6 +12,10 @@ Im Mittelpunkt standen die Arbeit mit wiederverwendbaren Komponenten, die Naviga
 
 Nach dem ursprünglichen Projektabschluss habe ich die Anwendung weiter überarbeitet, insbesondere im Hinblick auf **Responsive Design**, Bedienbarkeit und die Darstellung der Bilder.
 
+## Screenshot
+
+![Startseite der fiktiven B & A Archery Club Website](src/sreenshots/startseite.png)
+
 ## Funktionen
 
 - **Mehrseitige Navigation:** Startseite, Über uns, Aktuelles, Verein, Bilder, Kontakt und Impressum
